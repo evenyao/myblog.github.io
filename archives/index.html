@@ -339,18 +339,54 @@
     
     
     <article class="index-post">
+        <a class="abstract-title" href = "/2018/07/26/DOM操作/" >
+            
+                <span>DOM操作</span>
+        </a>
+        <div class="abstract-content">
+            DOM，文档对象模型。是HTML和XML文档的编程接口。它给文档（结构树）提供了一个结构化的表述并且定义了一种方式—程序可以对结构树进行访问，以改变文档的结构，样式和内容。
+DOM 提供了一种表述形式将文档作为一个结构化的节点组以及包含属性和方法的对象。从本质上说，它将web 页面和脚本或编程语言连接起来了。
+
+要改变页面的某个东西，JavaScript就需要获得对HTML文档中所有元素进行访问的入口。这个入口，连同对 HTML 元素进行添加、移动、改变或移除的方法和属性，都是通过DOM来获得的
+document 对象每个载入浏览器的HTML文档都会成为document对象。docume...
+        </div>
+        <div class="abstract-post-meta">
+            <!-- date  -->
+            <div class="abstract-date">
+                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2018/07/26</span>
+            </div>
+            <!-- tags  -->
+            
+            <div class= abstract-tags >
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "JavaScript">JavaScript</a>
+    
+</div>
+            
+        </div>
+    </article>
+    
+    
+    
+    
+    
+    
+    <article class="index-post">
         <a class="abstract-title" href = "/2018/07/24/JavaScript 正则/" >
             
                 <span>JavaScript 正则</span>
         </a>
         <div class="abstract-content">
-            元字符
-预定义类
-边界
-^在中括号中时，匹配非hello的12str = 'hello world'str.match(/[^hello]/g)   //[" ", "w", "r", "d"] 匹配非hello的
-^不在中括号时，匹配以hello开头的12str = 'hello world'str.match(/^hello/g)  //["hello"]
-$以..结尾12str = 'yeah world hello'str.match(/hello$/g)  //["hello"]
-1234str = 'hello1 yeah world hello2 root hello3's...
+            正则表达式(Regular Expression)是计算机科学的一个概念。正则表达式使用单个字符串来描述、匹配一系列符合某个句法规则的字符串。在很多文本编辑器里，正则表达式通常被用来检索、替换那些符合某个模式的文本。
+创建JavaScript通过内置对象RegExp支持正则表达式，有两种方式创建正则表达式对象，如果我们想匹配字符串中&lt;%xxx%&gt;两个百分号分割的字符串可以这么写
+
+构造函数
+1var reg=new RegExp('&lt;%[^%&gt;]+%&gt;','g');
+
+字面量(一般我们使用)
+1var reg=/&lt;%[^%&gt;]%&gt;/g;
+
+...
         </div>
         <div class="abstract-post-meta">
             <!-- date  -->
@@ -513,9 +549,18 @@ $以..结尾12str = 'yeah world hello'str.match(/hello$/g)  //["hello"]
     
     
     
+    
+    
+    
+    
+    
+    
+    
+    
+    
     <div class="total-and-search">
         <div class="total-archive">
-        Total : 2
+        Total : 3
         </div>
         <!-- search  -->
         
@@ -528,6 +573,11 @@ $以..结尾12str = 'yeah world hello'str.match(/hello$/g)  //["hello"]
     
     <div class="archive-year"> 2018 </div>
     <ul class="year-list">
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">07/26</span><a class="archive-post-title" href= "/2018/07/26/DOM操作/" >DOM操作</a>
+        </li>
     
     
         <li class="archive-post-item">

@@ -267,7 +267,7 @@ height:50vh;
                 
                 
                     <div class="post-intro-read">
-                        <span>Word count: <span class="post-count">1,961</span> / Reading time: <span class="post-count">9 min</span></span>
+                        <span>Word count: <span class="post-count">2,186</span> / Reading time: <span class="post-count">9 min</span></span>
                     </div>
                 
                 <div class="post-intro-meta">
@@ -396,7 +396,19 @@ height:50vh;
         <div class="container container-unloaded">
             <main class="main post-page">
     <article class="article-entry">
-        <h2 id="元字符"><a href="#元字符" class="headerlink" title="元字符"></a>元字符</h2><p><img src="https://upload-images.jianshu.io/upload_images/12904618-185e9b950a9afa1a.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""><br><br></p>
+        <p>正则表达式(Regular Expression)是计算机科学的一个概念。正则表达式使用单个字符串来描述、匹配一系列符合某个句法规则的字符串。在很多文本编辑器里，正则表达式通常被用来检索、替换那些符合某个模式的文本。<br><br></p>
+<h2 id="创建"><a href="#创建" class="headerlink" title="创建"></a>创建</h2><p>JavaScript通过内置对象RegExp支持正则表达式，有两种方式创建正则表达式对象，如果我们想匹配字符串中&lt;%xxx%&gt;两个百分号分割的字符串可以这么写</p>
+<ul>
+<li><p>构造函数</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> reg=<span class="keyword">new</span> <span class="built_in">RegExp</span>(<span class="string">'&lt;%[^%&gt;]+%&gt;'</span>,<span class="string">'g'</span>);</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>字面量(一般我们使用)</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> reg=<span class="regexp">/&lt;%[^%&gt;]%&gt;/g</span>;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>最后的g代表全局，还有几个修饰符</p>
+<p>g：global，全文搜索，不添加的话搜索到第一个结果停止搜索<br>i：ingore case，忽略大小写，默认大小写敏感<br>m：multiple lines，多行搜索<br><br></p>
+<h2 id="元字符"><a href="#元字符" class="headerlink" title="元字符"></a>元字符</h2><p><img src="https://upload-images.jianshu.io/upload_images/12904618-185e9b950a9afa1a.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""><br><br></p>
 <h2 id="预定义类"><a href="#预定义类" class="headerlink" title="预定义类"></a>预定义类</h2><p><img src="https://upload-images.jianshu.io/upload_images/12904618-9d24f53eee4c240c.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""><br><br></p>
 <h2 id="边界"><a href="#边界" class="headerlink" title="边界"></a>边界</h2><p><img src="https://upload-images.jianshu.io/upload_images/12904618-effef8167a14d37d.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>
 <p>^在中括号中时，匹配非hello的<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">str = <span class="string">'hello world'</span></span><br><span class="line">str.match(<span class="regexp">/[^hello]/g</span>)   <span class="comment">//[" ", "w", "r", "d"] 匹配非hello的</span></span><br></pre></td></tr></table></figure></p>
@@ -503,6 +515,11 @@ height:50vh;
     <!-- paginator  -->
     <ul class="post-paginator">
         <li class="next">
+            
+                <div class="nextSlogan">Next Post</div>
+                <a href= "/2018/07/26/DOM操作/" title= DOM操作 >
+                    <div class="nextTitle">DOM操作</div>
+                </a>
             
         </li>
         <li class="previous">
@@ -625,7 +642,7 @@ top:50vh;
         <div class="toc-catalog">
             <span class="iconfont-archer catalog-icon">&#xe613;</span><span>CATALOG</span>
         </div>
-        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#元字符"><span class="toc-number">1.</span> <span class="toc-text">元字符</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#预定义类"><span class="toc-number">2.</span> <span class="toc-text">预定义类</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#边界"><span class="toc-number">3.</span> <span class="toc-text">边界</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#量词"><span class="toc-number">4.</span> <span class="toc-text">量词</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#匹配是否是url的正则："><span class="toc-number">4.1.</span> <span class="toc-text">匹配是否是url的正则：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#判断用户输入的是一个手机号"><span class="toc-number">4.2.</span> <span class="toc-text">判断用户输入的是一个手机号</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#贪婪模式-非贪婪模式"><span class="toc-number">5.</span> <span class="toc-text">贪婪模式 / 非贪婪模式</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#分组"><span class="toc-number">6.</span> <span class="toc-text">分组</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#或"><span class="toc-number">6.1.</span> <span class="toc-text">或</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#分组嵌套"><span class="toc-number">6.2.</span> <span class="toc-text">分组嵌套</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#前瞻"><span class="toc-number">7.</span> <span class="toc-text">前瞻</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#JavaScript-正则相关函数"><span class="toc-number">8.</span> <span class="toc-text">JavaScript 正则相关函数</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#JavaScript-正则的方法"><span class="toc-number">9.</span> <span class="toc-text">JavaScript 正则的方法</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#test"><span class="toc-number">9.1.</span> <span class="toc-text">test</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#exec"><span class="toc-number">9.2.</span> <span class="toc-text">exec</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#match"><span class="toc-number">9.3.</span> <span class="toc-text">match</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#非全局调用"><span class="toc-number">9.3.1.</span> <span class="toc-text">非全局调用</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#全局调用"><span class="toc-number">9.3.2.</span> <span class="toc-text">全局调用</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#replace"><span class="toc-number">9.4.</span> <span class="toc-text">replace</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#split"><span class="toc-number">9.5.</span> <span class="toc-text">split</span></a></li></ol></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#创建"><span class="toc-number">1.</span> <span class="toc-text">创建</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#元字符"><span class="toc-number">2.</span> <span class="toc-text">元字符</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#预定义类"><span class="toc-number">3.</span> <span class="toc-text">预定义类</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#边界"><span class="toc-number">4.</span> <span class="toc-text">边界</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#量词"><span class="toc-number">5.</span> <span class="toc-text">量词</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#匹配是否是url的正则："><span class="toc-number">5.1.</span> <span class="toc-text">匹配是否是url的正则：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#判断用户输入的是一个手机号"><span class="toc-number">5.2.</span> <span class="toc-text">判断用户输入的是一个手机号</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#贪婪模式-非贪婪模式"><span class="toc-number">6.</span> <span class="toc-text">贪婪模式 / 非贪婪模式</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#分组"><span class="toc-number">7.</span> <span class="toc-text">分组</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#或"><span class="toc-number">7.1.</span> <span class="toc-text">或</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#分组嵌套"><span class="toc-number">7.2.</span> <span class="toc-text">分组嵌套</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#前瞻"><span class="toc-number">8.</span> <span class="toc-text">前瞻</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#JavaScript-正则相关函数"><span class="toc-number">9.</span> <span class="toc-text">JavaScript 正则相关函数</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#JavaScript-正则的方法"><span class="toc-number">10.</span> <span class="toc-text">JavaScript 正则的方法</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#test"><span class="toc-number">10.1.</span> <span class="toc-text">test</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#exec"><span class="toc-number">10.2.</span> <span class="toc-text">exec</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#match"><span class="toc-number">10.3.</span> <span class="toc-text">match</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#非全局调用"><span class="toc-number">10.3.1.</span> <span class="toc-text">非全局调用</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#全局调用"><span class="toc-number">10.3.2.</span> <span class="toc-text">全局调用</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#replace"><span class="toc-number">10.4.</span> <span class="toc-text">replace</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#split"><span class="toc-number">10.5.</span> <span class="toc-text">split</span></a></li></ol></li></ol>
     </div>
     
     <div class="back-top iconfont-archer">&#xe639;</div>
@@ -656,9 +673,18 @@ top:50vh;
     
     
     
+    
+    
+    
+    
+    
+    
+    
+    
+    
     <div class="total-and-search">
         <div class="total-archive">
-        Total : 2
+        Total : 3
         </div>
         <!-- search  -->
         
@@ -671,6 +697,11 @@ top:50vh;
     
     <div class="archive-year"> 2018 </div>
     <ul class="year-list">
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">07/26</span><a class="archive-post-title" href= "/2018/07/26/DOM操作/" >DOM操作</a>
+        </li>
     
     
         <li class="archive-post-item">
